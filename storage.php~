@@ -1,0 +1,24 @@
+<?php
+ session_start(); 
+?>
+<html>
+<head><title>
+FEEDBACK</title>
+</head>
+<body>
+<?php
+
+$user_name = "root";
+$password = "rosha";
+$database = "miniproject";
+$server = "127.0.0.1";
+
+$db_handle = mysql_connect($server, $user_name, $password);
+
+$db_found = mysql_select_db($database, $db_handle);
+if($_SESSION['type']==1)
+{
+print 'grafgfd';
+}?></body>
+</html>
+

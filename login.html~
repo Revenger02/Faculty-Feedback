@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+ <html>
+<head><style>
+
+#header {
+    background-color:white;
+    color:blue;
+    width:100%;
+   height:10%%;
+    padding:8px;
+}
+#container{
+        width:100%;
+        margin-left:20px;
+        margin-right:20px;
+        height:80%;
+      padding:10px; 
+    }
+
+</style>
+</head>
+
+<body>
+<div id="header">
+
+  <img src="logo.png" style="float:left;  height:90px;width:110px; margin-left:300px;margin-top:5px;" >
+        		<!-- bhaaratiiya suchanaa praudyogikii san:sthaan guwaahaat:ii -->
+                
+        		<span style="font-family:hindi,&#39; Lohit Devanagari &#39;">
+                    <h2>
+                       <p style="color:blue; font-weight:bold; font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; भारतीय सूचना
+प्रौद्योगिकी संस्थान गुवाहाटी</p>
+                    </h2>
+        		</span>
+			        <p style="color:blue; font-weight:bold; margin-left:100px;font-size:20px;margin-top:-0.85em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indian Institute of Information Technology Guwahati</p>
+			        
+                     	    			    
+</div>
+<div align="center" id="container" >
+<font size="6">
+<h4 align="center">  FEEDBACK LOGIN</h4></font>
+
+
+ <form  action="action_page.php" method="post" >
+<font size="4">  Login_name:<br>
+  <input type="text" name="ln"><br><br>
+  Login_id:<br></font>
+  <input type="text" name="li"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset"><br>
+  </form><br> <br> <br><br><br>
+  </div>
+  <div style="background:#820000; width:100%; height:15%;position:absolute; padding:10px; " id="foot">
+<div style="float:left;padding-left:80px;">
+<p style="font-family:Georgia, 'Times New Roman', Times, serif; font-size:18px; color:#FFF; text-align:left">
+Copyright © 2014<br>
+IIIT Guwahati<br>
+All rights reserved.</p></div>
+<div style="float:right;padding-right:80px;">
+<p style="font-family:Georgia, 'Times New Roman', Times, serif; font-size:18px; color:#FFF; text-align:right">
+Ambari<br>
+G.N.Bordoloi Road<br>
+Guwahati 781001
+</p>
+</div>
+</div></body></html>
+
+
+</body>
+</html>

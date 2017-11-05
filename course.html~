@@ -1,0 +1,46 @@
+<?php session_start();?>
+<html>
+<head>
+</head>
+<body style="background:linear-gradient(#bfbfbf,#404040,#333333)">
+
+<h2>  </h2>
+
+<form  action="root.php" >
+<table border="1" cellpadding="2" cellspacing="2"style="text-align: left; width: 100%;margin-left: auto; margin-right: auto;margin-top: 100px; color:black; background-color:#E6E6FA">
+<tr style="background-color:black; color:white;">
+<th>A:</th><th>ABOUT THE COURSE</TH><TH>STRONGLY DISAGREE</TH>
+<th> DISAGREE </th>
+<th> NEUTRAL </th>
+<th> AGREE </th>
+<th> STRONGLY AGREE </th>
+<tr><td>A1</td><td>A detailed course syllabus was provided at the beginning of the course.</td><td><input type="radio" name="r1" value="strongly_disagree">option1</td><td ><input type="radio" name="r1" value="disagree">option2</td><td  "><input type="radio" name="r1" value="neutral">option3</td><td  "><input type="radio" name="r1" value="agree">option4</td><td  "><input type="radio" name="r1" value="strongly_agree">option5</td></tr>
+<tr><td>A2</td><td>Text books were appropriate for the course.</td><td  "><input type="radio" name="r2" value="strongly_disagree">option1</td><td  "><input type="radio" name="r2" value="disagree"></td><td  "><input type="radio" name="r2" value="neutral"></td><td  "><input type="radio" name="r2" value="agree"></td><td  "><input type="radio" name="r2" value="strongly_agree"></td></tr>
+<tr><td>A3</td><td>Reference books provided good support for the course.</td><td><input type="radio" name="r3" value="strongly_disagree"></td><td><input type="radio" name="r3" value="disagree"></td><td><input type="radio" name="r3" value="neutral"></td><td><input type="radio" name="r3" value="agree"></td><td><input type="radio" name="r3" value="strongly_agree"></td></tr>
+<tr><td>A4</td><td>The course load was very heavy.</td><td><input type="radio" name="r4" value="strongly_disagree"></td><td><input type="radio" name="r4" value="disagree"></td><td><input type="radio" name="r4" value="neutral"></td><td><input type="radio" name="r4" value="agree"></td><td><input type="radio" name="r4" value="strongly_agree"></td></tr>
+<tr><td>A5</td><td>The course was highly enjoyable.</td><td><input type="radio" name="r5" value="strongly_disagree"></td><td><input type="radio" name="r5" value="disagree"></td><td><input type="radio" name="r5" value="neutral"></td><td><input type="radio" name="r5" value="agree"></td><td><input type="radio" name="r5" value="strongly_agree"></td></tr>
+</tr>
+</table>
+<table border="1" cellpadding="2" cellspacing="2"style="text-align: left; width: 100%;margin-left: auto; margin-right: auto;margin-top: 100px; color:black; background-color:#E6E6FA">
+<tr style="background-color:black; color:white;">
+<th>B:</th><th>ABOUT THE INSTRUCTOR</TH><TH>STRONGLY DISAGREE</TH>
+<th> DISAGREE </th>
+<th> NEUTRAL </th>
+<th> AGREE </th>
+<th> STRONGLY AGREE </th>
+</tr>
+</tr><tr><td>B.1</td><td>Overall, the instructor was excellent.</td><td><input type="radio" name="r1" value="strongly_disagree"></td><td><input type="radio" name="r1" value="disagree"></td><td><input type="radio" name="r1" value="neutral"></td><td><input type="radio" name="r1" value="agree"></td><td><input type="radio" name="r1" value="strongly_agree"></td></tr>
+<tr><td>B.2</td><td>The instructor was well prepared for the class.</td><td><input type="radio" name="r2" value="strongly_disagree"></td><td><input type="radio" name="r2" value="disagree"></td><td><input type="radio" name="r2" value="neutral"></td><td><input type="radio" name="r2" value="agree"></td><td><input type="radio" name="r2" value="strongly_agree"></td></tr>
+<tr><td>B.3</td><td>The concepts were explained properly.</td><td><input type="radio" name="r3" value="strongly_disagree"></td><td><input type="radio" name="r3" value="disagree"></td><td><input type="radio" name="r3" value="neutral"></td><td><input type="radio" name="r3" value="agree"></td><td><input type="radio" name="r3" value="strongly_agree"></td></tr>
+<tr><td>B.4</td><td>Classes were held regularly as per time-table.</td><td><input type="radio" name="r4" value="strongly_disagree"></td><td><input type="radio" name="r4" value="disagree"></td><td><input type="radio" name="r4" value="neutral"></td><td><input type="radio" name="r4" value="agree"></td><td><input type="radio" name="r4" value="strongly_agree"></td></tr>
+<tr><td>B.5</td><td>The instructor’s voice was audible and understandable.</td><td><input type="radio" name="r5" value="strongly_disagree"></td><td><input type="radio" name="r5" value="disagree"></td><td><input type="radio" name="r5" value="neutral"></td><td><input type="radio" name="r5" value="agree"></td><td><input type="radio" name="r5" value="strongly_agree"></td></tr>
+</tr><tr><td>B.6</td><td>Black-board work/visual presentations were of good quality.</td><td><input type="radio" name="r1" value="strongly_disagree"></td><td><input type="radio" name="r1" value="disagree"></td><td><input type="radio" name="r1" value="neutral"></td><td><input type="radio" name="r1" value="agree"></td><td><input type="radio" name="r1" value="strongly_agree"></td></tr>
+<tr><td>B.7</td><td>Topics were covered in a logical sequence.</td><td><input type="radio" name="r2" value="strongly_disagree"></td><td><input type="radio" name="r2" value="disagree"></td><td><input type="radio" name="r2" value="neutral"></td><td><input type="radio" name="r2" value="agree"></td><td><input type="radio" name="r2" value="strongly_agree"></td></tr>
+<tr><td>B.8</td><td>The coverage of the course was complete.</td><td><input type="radio" name="r3" value="strongly_disagree"></td><td><input type="radio" name="r3" value="disagree"></td><td><input type="radio" name="r3" value="neutral"></td><td><input type="radio" name="r3" value="agree"></td><td><input type="radio" name="r3" value="strongly_agree"></td></tr>
+<tr><td>B.9</td><td>Questions and discussions were encouraged.</td><td><input type="radio" name="r4" value="strongly_disagree"></td><td><input type="radio" name="r4" value="disagree"></td><td><input type="radio" name="r4" value="neutral"></td><td><input type="radio" name="r4" value="agree"></td><td><input type="radio" name="r4" value="strongly_agree"></td></tr>
+<tr><td>B.10</td><td>Evaluation was done regularly & academic advices were given.</td><td><input type="radio" name="r5" value="strongly_disagree"></td><td><input type="radio" name="r5" value="disagree"></td><td><input type="radio" name="r5" value="neutral"></td><td><input type="radio" name="r5" value="agree"></td><td><input type="radio" name="r5" value="strongly_agree"></td></tr>
+</table>
+<br>
+<center>
+<input type="submit"value="submit" style="background-color:grey;color:white; border-style:outset; border-width:5px">
+</center><body></html>

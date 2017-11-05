@@ -1,0 +1,5 @@
+<html>
+<body>
+<input type="button" name="button1" value="Go To Url" onClick="window.navigate('login.php')">
+</body>
+</html>

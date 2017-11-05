@@ -1,0 +1,78 @@
+<?php 
+ini_set('session.cache_limiter','public');
+session_cache_limiter(false);
+session_start();?>
+<html><head>
+<title>selection</title></head>
+<body style="background-image:url('images/selection.png'); background-repeat:no-repeat;">
+<?php
+if(isset($_POST["subject"]))
+$_SESSION["subject"]=$_POST["subject"];
+$user_name = "root";
+$password = "rosha";
+$database = "miniproject";
+$server = "127.0.0.1";
+
+$db_handle = mysql_connect($server, $user_name, $password);
+
+$db_found = mysql_select_db($database, $db_handle);
+if ($db_found) {
+$result1 = mysql_query ("SELECT * FROM login_credential where login_name='$_SESSION[lname]' and login_id='$_SESSION[l_id]' ");
+if(mysql_fetch_row($result1) )
+{
+$result = mysql_query ("SELECT * FROM course_contain where course_id = '$_SESSION[subject]' ");
+while ($row = mysql_fetch_row($result)){
+$field= explode("-",$row[2]);
+if($field[0]=='1' && $field[1]=='0' && $field[2]=='1'){
+$_SESSION["course_title"]=$row[1];
+$_SESSION["c_credit"]=$row[4];
+$result1 = mysql_query ("SELECT * FROM Instructor where f_id = '$row[3]' ");
+$row1 = mysql_fetch_row($result1);
+//print $row1[0];
+$_SESSION["i_name"]=$row1[1];
+$result2 = mysql_query ("SELECT * FROM course_lab where course_id = '$row[0]' ");
+$row2 = mysql_fetch_row($result2);
+$_SESSION["l_name"]=$row2[2];
+$_SESSION["lab_id"]=$row2[1];
+$_SESSION["l_credit"]=$row2[3];
+
+echo "<a href='course-lab.php'><button style='color:lightcyan;position:absolute; right:1%;bottom:4%;  background-color:lightslategray;border:0px; border-radius:50px ; box-shadow: 0 10px #27496d;width: 10%; height:10%;'><font size=4 style='color:black; '>Continue</button></a><a href='login.php'><button style='color:lightcyan; background-color:lightslategray; position:absolute; right:2%;top:4%;border:0px; border-radius:50px ; box-shadow: 0 10px #27496d;width: 5%; height:5%;'><font size=3 style='color:white; '>Logout</button></a>
+<a href='action_page.php' ><button style='color:lightsyan; background-color:lightslategray;position:absolute; left:1%;bottom:4%;border:0px; border-radius:50px ; box-shadow: 0 10px #27496d;width: 10%; height:10%;'><font size=4 style='color:white; '>BACK</button></a>";
+$_SESSION['type']=1;
+}
+if($field[0]=='0' && $field[1]=='0' && $field[2]=='1'){
+$_SESSION['course_id']=$row[0];
+$_SESSION["course_title"]=$row[1];
+$_SESSION["c_credit"]=$row[4];
+$result1 = mysql_query ("SELECT * FROM Instructor where f_id = '$row[3]' ");
+$row1 = mysql_fetch_row($result1);
+//print $row1[0];
+$_SESSION["i_name"]=$row1[1];
+
+echo "<a href='course.php'><button style='color:lightcyan;position:absolute; right:1%;bottom:4%;  background-color:lightslategray;border:0px; border-radius:50px ; box-shadow: 0 10px #27496d;width: 10%; height:10%;'><font size=4 style='color:white; '>Continue</button></a>";
+echo "<a href='login.php' ><button style='color:lightcyan;position:absolute; right:2%;top:4%;  background-color:lightslategray;border:0px; border-radius:50px ; box-shadow: 0 10px #27496d;width: 5%; height:5%;'><font size=3 style='color:white; '>Logout</button></a>
+<a href='action_page.php' ><button style='color:lightcyan;position:absolute; left:1%;bottom:4%;  background-color:lightslategray;border:0px; border-radius:50px ; box-shadow: 0 10px #27496d;width: 10%; height:10%;'><font size=4 style='color:white; '>BACK</button></a>";
+$_SESSION['type']=2;
+
+
+}
+if($field[0]=='1' && $field[1]=='1' && $field[2]=='1'){
+echo "<a href='course-lab-tutorial.php'><button style='color:lightcyan;position:absolute; right:0;bottom:0;  background-color:lightslategray;border:0px; border-radius:50px ; box-shadow: 0 10px #27496d;width: 15%; height:15%;'><font size=10 style='color:white; '>Link Text</button></a>";
+echo "<a href='login.php' ><button>Logout</button></a>
+<a href='action_page.php' ><button>BACK</button></a>";
+$_SESSION['type']=3;
+}
+if($field[0]=='0' && $field[1]=='1' && $field[2]=='1'){
+echo "<a href='course-tutorial.php'><button>Link Text</button></a>";
+echo "<a href='login.php' ><button>Logout</button></a>
+<a href='action_page.php' ><button>BACK</button></a>";
+$_SESSION['type']=4;
+}
+}
+}
+}
+?>
+
+
+</body>
+</html>
